@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 20:26:10 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/04 19:08:23 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/07 11:14:06 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,6 @@ char	*ft_first_line(char *stash)
 
 	if (!stash)
 		return (NULL);
-	next_line = ft_substr(stash, 0, ft_strchr(stash, '\n') - stash + 1);
-	return (next_line);
+	first_line = ft_substr(stash, 0, ft_strchr(stash, '\n') - stash + 1);
+	return (first_line);
 }
