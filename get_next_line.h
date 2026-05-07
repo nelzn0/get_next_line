@@ -6,14 +6,28 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 20:26:25 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/01 20:27:59 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/07 13:53:26 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
+# include <unistd.h>
+# include <stdlib.h>
+
 // functions
 char	*get_next_line(int fd);
+
+// helper functions
+char	*ft_first_line(char *stash);
+char	*ft_read_file(int fd, char *stash);
+char	*ft_trim_stash(char *stash);
+
+// utils
+size_t	ft_strlen(const char *s);
+char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strchr(const char *s, int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

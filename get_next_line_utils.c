@@ -6,11 +6,13 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 20:26:10 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/07 11:14:06 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/07 14:29:02 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
+#include "get_next_line.h"
+
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
@@ -26,15 +28,15 @@ char	*ft_strjoin(char *s1, char *s2)
 {
 	int		i;
 	int		j;
-	int		s1_size;
-	int		s2_size;
 	char	*result;
 
 	i = 0;
 	j = 0;
-	s1_size = ft_strlen(s1);
-	s2_size = ft_strlen(s2);
-	result = malloc(s1_size + s2_size + 1);
+	if (!s2)
+		return (NULL);
+	if (!s1)
+		return (ft_substr(s2, 0, ft_strlen(s2)));
+	result = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!result)
 		return (NULL);
 	while (s1[i])
@@ -53,6 +55,8 @@ char	*ft_strjoin(char *s1, char *s2)
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (!s)
+		return (NULL);
 	while (*s)
 	{
 		if (*s == (char) c)
@@ -98,6 +102,8 @@ char	*ft_first_line(char *stash)
 
 	if (!stash)
 		return (NULL);
+	if (!ft_strchr(stash, '\n'))
+		return (ft_substr(stash, 0, ft_strlen(stash)));
 	first_line = ft_substr(stash, 0, ft_strchr(stash, '\n') - stash + 1);
 	return (first_line);
 }
