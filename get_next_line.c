@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 20:25:37 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/07 11:58:52 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/07 13:21:52 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,4 @@ char	*get_next_line(int fd)
 	stash = ft_trim_stash(old_stash);
 	free(old_stash);
 	return (first_line);
-}
-
-int	main(void)
-{
-	return (0);
 }
