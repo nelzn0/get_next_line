@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 13:21:58 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/07 14:41:36 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/07 16:36:37 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 	int		fd;
 	char	*result;
 
-	fd = open("test.txt", O_RDONLY);
+	fd = open("only_nl.txt", O_RDONLY);
 	if (fd == -1)
 		return (-1);
 	result = get_next_line(fd);

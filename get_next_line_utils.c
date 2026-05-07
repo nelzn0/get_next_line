@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 20:26:10 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/07 14:29:02 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/07 19:15:17 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,11 +99,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 char	*ft_first_line(char *stash)
 {
 	char	*first_line;
+	char	*new_line;
+	size_t	len;
 
-	if (!stash)
+	if (!stash || !*stash)
 		return (NULL);
-	if (!ft_strchr(stash, '\n'))
+	new_line = ft_strchr(stash, '\n');
+	if (!new_line)
 		return (ft_substr(stash, 0, ft_strlen(stash)));
-	first_line = ft_substr(stash, 0, ft_strchr(stash, '\n') - stash + 1);
+	len = (new_line - stash) + 1;
+	first_line = ft_substr(stash, 0, len);
 	return (first_line);
 }
