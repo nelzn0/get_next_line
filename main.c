@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 13:21:58 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/07 14:24:34 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/07 14:41:36 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int	main(void)
 		free (result);
 		result = get_next_line(fd);
 	}
+	printf("%s\n", get_next_line(-1));
 	close (fd);
 }
