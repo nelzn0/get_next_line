@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 13:21:58 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/08 15:52:06 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:53:12 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 
 	result = get_next_line(fd);
 
-	while (result != NULL)
+	while (result)
 	{
 		printf("%s \n", result);
 		free (result);
