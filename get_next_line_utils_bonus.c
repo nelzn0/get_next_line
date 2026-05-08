@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/01 20:26:10 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/08 14:49:03 by nda-roch         ###   ########.fr       */
+/*   Created: 2026/05/08 14:59:19 by nda-roch          #+#    #+#             */
+/*   Updated: 2026/05/08 15:00:41 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *s)
 {
