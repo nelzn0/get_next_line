@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 13:21:58 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/08 15:50:44 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:52:06 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 	close (fd);
 
 	error = get_next_line(-1);
-	if (error == NULL)
+	if (!error)
 		printf("INVALID FILE DESCRIPTOR!\n");
 
 	return (0);
