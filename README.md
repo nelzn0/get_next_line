@@ -9,8 +9,11 @@
 The project introduces key concepts in C programming:
 
 * **Static Variables**: To "remember" data between successive function calls.
+
 * **Buffer Management**: Handling data chunks of arbitrary sizes (defined by `BUFFER_SIZE`).
+
 * **Memory Management**: Efficiently allocating and freeing memory to prevent leaks and handle massive files.
+
 * **File Descriptors**: Interacting with the system's I/O to read from files or standard input.
 
 ---
@@ -59,9 +62,12 @@ A static variable is used because the `read()` function may pull more data than 
 
 ---
 
-## Technical Choices
+## Efficiency and Optimization and Bonus
 
-* **Efficiency ($O(n)$ optimization)**: To handle giant lines and avoid timeouts, the algorithm uses pointer arithmetic to find newlines and calculate lengths, minimizing the number of times `ft_strlen` or `ft_strchr` are called on the same string.
+*   **Single-Pass Logic**: To handle massive lines without performance drops, the algorithm was designed to minimize string traversal. Rather than repeatedly scanning the entire stash from the beginning, the function identifies the position of the newline once and reuses that information for both line extraction and stash trimming.
+
+*   **Pointer Arithmetic**: Instead of using loop-based counting to find the length of a string, the algorithm uses pointer arithmetic (subtracting the starting memory address from the newline's address). This allows the computer to calculate lengths instantly via a single mathematical operation, saving significant processing time on large files.
+
 * **Bonus Implementation**: The bonus version uses an array of static pointers (`static char *stash[OPEN_MAX]`) to manage multiple file descriptors simultaneously without losing the state of one file when reading from another.
 
 ---
@@ -74,9 +80,12 @@ A static variable is used because the `read()` function may pull more data than 
 
 ### Use of AI
 
-AI was used in this project as a collaborative peer for the following tasks:
+AI was used in this project as a supportive peer to help navigate the logic and structure of the code. Specifically, it assisted with:
 
-* **Debugging**: Identifying the cause of `Segmentation Faults` related to `NULL` returns from `malloc` (NULL_CHECK tests).
-* **Optimization**: Analyzing time complexity to resolve `Timeout` issues in "Giant Line" test cases.
-* **Refactoring**: Guidance on improving code readability and standardizing variable types (converting `int` to `size_t` for safety).
-* **Documentation**: Assistance in structuring this `README.md` to meet 42 curriculum requirements.
+*   **Debugging**: Troubleshooting memory-related issues, specifically identifying where null pointers were causing crashes during edge-case testing.
+
+*   **Refactoring & Logic**: Providing guidance on how to restructure functions like `ft_strjoin` and `ft_read_file` to be more readable and logically sound.
+
+*   **Type Safety**: Advice on standardizing variable types (such as using `size_t`) to ensure the code follows best practices for memory management.
+
+*   **Documentation**: Helping to organize and draft this `README.md` to ensure all project requirements were clearly addressed.
