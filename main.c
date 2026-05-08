@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 13:21:58 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/07 16:36:37 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:50:44 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,23 @@ int	main(void)
 {
 	int		fd;
 	char	*result;
+	char	*error;
 
 	fd = open("only_nl.txt", O_RDONLY);
-	if (fd == -1)
-		return (-1);
+
 	result = get_next_line(fd);
+
 	while (result != NULL)
 	{
 		printf("%s \n", result);
 		free (result);
 		result = get_next_line(fd);
 	}
-	printf("%s\n", get_next_line(-1));
 	close (fd);
+
+	error = get_next_line(-1);
+	if (error == NULL)
+		printf("INVALID FILE DESCRIPTOR!\n");
+
+	return (0);
 }
