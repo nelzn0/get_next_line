@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 20:26:10 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/08 13:28:48 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/08 14:31:08 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (!s)
@@ -26,8 +26,8 @@ size_t	ft_strlen(const char *s)
 
 char	*ft_strjoin(char *s1, char *s2)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 	char	*result;
 
 	i = 0;
