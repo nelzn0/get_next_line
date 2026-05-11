@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 20:26:25 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/07 13:53:26 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/11 15:39:22 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 // functions
 char	*get_next_line(int fd);

@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 14:59:30 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/08 15:13:50 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/11 15:39:37 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 # ifndef OPEN_MAX
 #  define OPEN_MAX 1024
