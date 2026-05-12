@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 15:41:14 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/08 15:45:02 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/12 16:01:12 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(void)
 	free(result);
 
 	result = get_next_line(fd2);
-	printf("File 2, Line 2 %s", result);
+	printf("File 2, Line 2: %s", result);
 	free(result);
 
 	close(fd1);

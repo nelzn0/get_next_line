@@ -6,7 +6,7 @@
 /*   By: nda-roch <nda-roch@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 13:21:58 by nda-roch          #+#    #+#             */
-/*   Updated: 2026/05/08 15:53:12 by nda-roch         ###   ########.fr       */
+/*   Updated: 2026/05/12 16:01:57 by nda-roch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 #include <stdio.h>
 #include <fcntl.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
 	int		fd;
 	char	*result;
-	char	*error;
 
-	fd = open("only_nl.txt", O_RDONLY);
+	fd = open(argv[1], O_RDONLY);
 
 	result = get_next_line(fd);
 
